@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema",
   "type": "object",
-  "title": "Tezos Snapshots",
-  "description": "List of all available Tezos Snapshots",
+  "title": "Mavryk Snapshots",
+  "description": "List of all available Mavryk Snapshots",
   "required": ["data", "org", "date_generated"],
   "properties": {
     "org": {
@@ -26,16 +26,16 @@
         "sha256",
         "filesize_bytes",
         "filesize",
-        "tezos_version",
+        "mavryk_version",
         "chain_name",
         "artifact_type"
         ],
         "type": "object",
-        "description": "The metadata of a single Tezos node storage artifact (snapshot or tarball).",
+        "description": "The metadata of a single Mavryk node storage artifact (snapshot or tarball).",
         "properties": {
           "block_hash": {
             "type": "string",
-            "description": "A reference for a block in the Tezos blockchain.",
+            "description": "A reference for a block in the Mavryk blockchain.",
             "examples": ["BMHv8Rmx2QQtN786bUCuAxxemTmdJxaonbmUALifMYtivT13Hxg"]
           },
           "block_height": {
@@ -50,13 +50,13 @@
           },
           "filename": {
             "type": "string",
-            "examples": ["tezos-limanet-rolling-tarball-438782.lz4"]
+            "examples": ["mavryk-atlasnet-rolling-tarball-438782.lz4"]
           },
           "url": {
             "type": "string",
             "description": "Reference to this file on the web",
             "examples": [
-              "https://limanet-v15.xtz-shots.io/tezos-limanet-rolling-tarball-438782.lz4"
+              "https://atlasnet-v19.xtz-shots.io/mavryk-atlasnet-rolling-tarball-438782.lz4"
             ]
           },
           "sha256": {
@@ -75,14 +75,14 @@
             "description": "Size of file in kilobytes (K), megabytes (M), gigabytes (G) or terabytes (T)",
             "examples": ["6G", "51M"]
           },
-          "tezos_version": {
+          "mavryk_version": {
             "type": "object",
-            "description": "Tezos version running on the node this data is from",
+            "description": "Mavryk version running on the node this data is from",
             "required": ["implementation", "version", "commit_info"],
             "properties": {
               "implementation": {
                 "type": "string",
-                "examples": ["octez", "tezedge"]
+                "examples": ["mavkit", "tezedge"]
               },
               "version": {
                 "type": "object",
@@ -118,8 +118,8 @@
           },
           "chain_name": {
             "type": "string",
-            "description": "Name of Tezos blockchain",
-            "examples": ["TEZOS_MAINNET", "TEZOS_LIMANET_2022-10-13T15:00:00Z"]
+            "description": "Name of Mavryk blockchain",
+            "examples": ["MAVRYK_MAINNET", "MAVRYK_ATLASNET_2022-10-13T15:00:00Z"]
           },
           "history_mode": {
             "type": "string",
@@ -128,12 +128,12 @@
           },
           "artifact_type": {
             "type": "string",
-            "description": "Tarball or Tezos Snapshot",
-            "enum": ["tarball", "tezos-snapshot"]
+            "description": "Tarball or Mavryk Snapshot",
+            "enum": ["tarball", "mavryk-snapshot"]
           },
           "snapshot_version": {
             "type": "integer",
-            "description": "Version of Octez snapshot format. Tarball will not have a snapshot_version.",
+            "description": "Version of Mavkit snapshot format. Tarball will not have a snapshot_version.",
             "examples": [5, 4]
           }
         }

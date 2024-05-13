@@ -1,9 +1,9 @@
-# tezos-schema
-A public place to field feedback and releases of metadata schema for Tezos storage artifacts.
+# mavryk-schema
+A public place to field feedback and releases of metadata schema for Mavryk storage artifacts.
 
-We're using **GitHub discussions** to field questions/improvements/suggestions for this repo.  Feel free to [open a discussion](https://github.com/oxheadalpha/tezos-schema/discussions) and we'll turn it into an issue, and eventually- a release.
+We're using **GitHub discussions** to field questions/improvements/suggestions for this repo.  Feel free to [open a discussion](https://github.com/oxheadalpha/mavryk-schema/discussions) and we'll turn it into an issue, and eventually- a release.
 
-- [tezos-schema](#tezos-schema)
+- [mavryk-schema](#mavryk-schema)
   - [Validate your own metadata](#validate-your-own-metadata)
     - [bash](#bash)
     - [python](#python)
